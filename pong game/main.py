@@ -34,12 +34,18 @@ while game_playing:
     if pong_ball.xcor() >= 490:
         scorer.lt_score += 1
         scorer.add_score()
+        if scorer.lt_score >= 5 or scorer.rt_score >= 5:
+            scorer.declare_winner()
+            game_playing = False
         screen.tracer(1)
         pong_ball.reset_start()
         screen.tracer(0)
     if pong_ball.xcor() <= -490:
         scorer.rt_score += 1
         scorer.add_score()
+        if scorer.lt_score >= 5 or scorer.rt_score >= 5:
+            scorer.declare_winner()
+            game_playing = False
         screen.tracer(1)
         pong_ball.reset_start()
         screen.tracer(0)
@@ -84,10 +90,6 @@ while game_playing:
     if rand == 20:
         wall_spawns.lt_connect()
         wall_spawns.rt_connect()
-
-    if scorer.lt_score >= 5 or scorer.rt_score >= 5:
-        scorer.declare_winner()
-        game_playing = False
 
     screen.update()
 
