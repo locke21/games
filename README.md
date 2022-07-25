@@ -1,2 +1,2 @@
 # games
-Different games. Some from classes assignments that I add and modify. Others are originals.
+Different games. Some from class assignments that has been modified and improved. Others are originals.
