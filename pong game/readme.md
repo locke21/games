@@ -12,5 +12,4 @@ Random wall spawns:
 Quality of life improvements:
   - Ball should try and maintain an acceptable rate. Previously found the ball moved too fast hitting objects, sometimes disappearing with the speed force.
   - Ball should accelerate after hitting paddles to provide more challenge.
- 
- 
+  - Randomized start. 
