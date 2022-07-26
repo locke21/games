@@ -60,19 +60,19 @@ while game_playing:
     # Checks for paddle hits #
     for parts in flippers.rt_main_paddle:
         if pong_ball.distance(parts) < 15:
-            screen.tracer(0)
-            pong_ball.goto(pong_ball.xcor() - 15, pong_ball.ycor())
-            screen.update()
-            if parts.xcor() < 430:
+            if parts.xcor() < 445:
                 pong_ball.flipper_hit()
+            screen.tracer(0)
+            pong_ball.goto(pong_ball.xcor() - 25, pong_ball.ycor())
+            screen.update()
             pong_ball.paddle_bounce()
     for parts in flippers.lt_main_paddle:
         if pong_ball.distance(parts) < 15:
-            screen.tracer(0)
-            pong_ball.goto(pong_ball.xcor() - 15, pong_ball.ycor())
-            screen.update()
             if parts.xcor() > -430:
                 pong_ball.flipper_hit()
+            screen.tracer(0)
+            pong_ball.goto(pong_ball.xcor() + 25, pong_ball.ycor())
+            screen.update()
             pong_ball.paddle_bounce()
 
     # Random walls detection #
