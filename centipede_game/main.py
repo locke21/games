@@ -13,6 +13,13 @@ screen.tracer(0)
 
 snake = Snake()
 food = Food()
+
+try:
+    with open("data.txt", "x") as f:
+        f.write("0")
+except FileExistsError:
+    pass
+
 scoreboard = Scoreboard()
 
 screen.listen()
